@@ -1,3 +1,5 @@
+Publish by Autofleet until https://github.com/RasCarlito/axios-cache-adapter/pull/261/files is merged, requierd to fix https://github.com/axios/axios/pull/3694
+
 # :rocket: axios-cache-adapter [![Build Status](https://travis-ci.org/RasCarlito/axios-cache-adapter.svg?branch=master)](https://travis-ci.org/RasCarlito/axios-cache-adapter) [![codecov](https://codecov.io/gh/RasCarlito/axios-cache-adapter/branch/master/graph/badge.svg)](https://codecov.io/gh/RasCarlito/axios-cache-adapter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 > Caching adapter for axios. Store request results in a configurable store to prevent unneeded network requests.
