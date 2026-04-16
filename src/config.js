@@ -20,7 +20,7 @@ const defaults = {
       filter: null,
       methods: ['post', 'patch', 'put', 'delete']
     },
-    adapter: axios.defaults.adapter,
+    adapter: typeof axios.getAdapter === 'function' ? axios.getAdapter(axios.defaults.adapter) : axios.defaults.adapter,
     clearOnStale: true,
     clearOnError: true,
     readOnError: false,
