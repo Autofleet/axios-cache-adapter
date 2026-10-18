@@ -96,11 +96,14 @@ const build = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env', {
-                useBuiltIns: 'usage',
-                exclude: polyfillExclusions,
-                include: ['transform-classes', 'proposal-object-rest-spread']
-              }]
+              target === 'node'
+                // Node has every built-in this needs; core-js 2's RegExp feature detection disables V8's regex fast paths process-wide
+                ? ['@babel/preset-env', { targets: { node: '14' } }]
+                : ['@babel/preset-env', {
+                  useBuiltIns: 'usage',
+                  exclude: polyfillExclusions,
+                  include: ['transform-classes', 'proposal-object-rest-spread']
+                }]
             ]
           }
         }]
